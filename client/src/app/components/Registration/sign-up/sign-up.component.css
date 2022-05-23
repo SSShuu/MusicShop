@@ -1,0 +1,59 @@
+.container {
+  height: 130vh;
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+.header-container {
+  margin-left: 98px;
+  padding-top: 10px;
+}
+.header {
+  letter-spacing: 6px;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-top: 5px;
+}
+.personal-information-container {
+  display: flex;
+  flex-direction: column;
+}
+.sign-in-information-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #361937;
+  border: none;
+  color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  width: 26vw;
+  left: 30px;
+}
+.go-back {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.go-back:hover {
+  text-decoration: underline;
+}
+.go-back-container {
+  position: absolute;
+  left: 550px;
+  bottom: -183px;
+}
+.sign-up-form-container {
+  margin-left: 100px;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+.mat-form-field {
+  width: 450px !important;
+  margin: auto;
+}
+.personal-information-header {
+  margin-top: 15px;
+}

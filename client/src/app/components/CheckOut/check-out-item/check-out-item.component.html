@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="item-image-container">
+    <img class="item-image" src="{{ item.image }}" alt="item-image" />
+  </div>
+  <div class="item-details">
+    <h2>{{ item.product_name }}</h2>
+    <h2>
+      {{ item.product_price | number: "2.2" }}
+      <span *ngIf="!_ShoppingService.showRemoveItem"
+        >$ X {{ item.amount }}</span
+      >
+    </h2>
+    <div *ngIf="_ShoppingService.showRemoveItem" class="qty-button-wrapper">
+      <div>
+        <button class="qty-button" (click)="decrementQty(item)">-</button>
+      </div>
+      <div class="qty-number-container">
+        <div>{{ item.amount }}</div>
+      </div>
+      <div>
+        <button class="qty-button" (click)="incrementQty(item)">+</button>
+      </div>
+    </div>
+    <div *ngIf="_ShoppingService.updateQuantity">
+      <p (click)="updateItemAmount(item)" class="update-item">UPDATE</p>
+    </div>
+    <div *ngIf="_ShoppingService.showRemoveItem">
+      <p
+        (click)="_ShoppingService.deleteItemFromCart(item._id)"
+        class="remove-item"
+      >
+        Remove Item
+      </p>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>

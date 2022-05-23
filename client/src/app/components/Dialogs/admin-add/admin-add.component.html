@@ -1,0 +1,36 @@
+<div class="container">
+  <form [formGroup]="addProductForm" class="sign-up-form">
+    <div>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>NAME</mat-label>
+        <input class="input" matInput formControlName="product_name" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>PRICE</mat-label>
+        <mat-icon></mat-icon>
+        <input type="number" matInput formControlName="product_price" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" required>
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let category of _ShoppingService.categories" [value]="category._id">{{
+            category.category_name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <form class="images" [formGroup]="images">
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>IMAGE</mat-label>
+        <mat-icon></mat-icon>
+        <input formControlName="first_image" matInput required />
+      </mat-form-field>
+    </form>
+  </form>
+  <button [disabled]="addProductForm.invalid" (click)="addProductByAdminHandler()" mat-dialog-close mat-raised-button>
+    Done
+  </button>
+</div>

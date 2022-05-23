@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.main-section {
+  background-color: #050303;
+}
+
+.columns-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logos {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h2 {
+  color: #efedef;
+  margin-top: 15px;
+}
+
+ul {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: #efedef;
+  line-height: 2;
+}
+
+li {
+  list-style: none;
+}
+
+.stars-image {
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 25px;
+  margin-top: 18px;
+}
+
+.cards-logo-container {
+  margin: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 40vw;
+}
+
+.detils {
+  color: #efedef;
+}
+
+.logo {
+  width: 70px;
+  height: 40px;
+}
+
+.shop-logo {
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  margin: 25px;
+}
+
+.bottom-section {
+  height: 10vh;
+  background-color: #0c0c0c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media-icon {
+  background-color: #636569;
+  margin: 20px;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.media-icons-container {
+  width: 20vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.copyrights {
+  letter-spacing: 2px;
+  display: flex;
+  margin: auto;
+  margin: 10px;
+  margin-left: 30px;
+  color: #fff;
+}

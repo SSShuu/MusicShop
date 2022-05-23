@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+}
+.order-detailes {
+  width: 49vw;
+  padding-right: 20px;
+  border-right: 1px solid black;
+}
+.order-summary {
+  padding-left: 20px;
+  width: 49vw;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.expiration-date {
+  width: 150px;
+}
+.card-verification {
+  width: 100px;
+}
+.credit-card-number {
+  width: 70%;
+}
+.total-price {
+  margin-top: 5px;
+  display: flex;
+}
+.total {
+  margin-right: 3px;
+}
+.cart-items-details-container {
+  overflow-y: scroll;
+  height: 55vh;
+}
+.submit-button {
+  background-color: #361937;
+  border: none;
+  color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  width: 10vw;
+  margin-bottom: 20px;
+}

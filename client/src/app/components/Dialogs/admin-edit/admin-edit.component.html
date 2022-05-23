@@ -1,0 +1,40 @@
+<div class="container">
+  <form *ngIf="editProductForm" [formGroup]="editProductForm" class="sign-up-form">
+    <div class="name-price-container">
+      <mat-form-field class="form-field name" floatLable="auto" appearance="outline">
+        <mat-label>NAME</mat-label>
+        <mat-icon></mat-icon>
+        <input matInput formControlName="product_name" required />
+      </mat-form-field>
+
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>PRICE</mat-label>
+        <mat-icon></mat-icon>
+        <input matInput formControlName="price" required />
+      </mat-form-field>
+
+      <mat-form-field class="category" appearance="outline" required>
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let category of _ShoppingService.categories" [value]="category._id">{{
+            category.category_name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="images-inputs-container">
+      <form [formGroup]="imagesForm">
+        <div>
+          <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+            <mat-label>IMAGE</mat-label>
+            <mat-icon></mat-icon>
+            <input matInput formControlName="first_image" required />
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </form>
+  <button (click)="updateProductByAdminHandler()" mat-dialog-close class="edit-button">
+    EDIT
+  </button>
+</div>

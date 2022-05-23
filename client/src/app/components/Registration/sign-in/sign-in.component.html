@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="left-guitar-image-container">
+    <img class="left-guitar-image" src="https://i.pinimg.com/236x/fc/90/84/fc908456ea45df8f31cb5dbda95f6a38.jpg"
+      alt="" />
+  </div>
+  <mat-card class="form-container">
+    <div class="sign-in-form">
+      <h1>ALREADY HAVE AN ACCOUNT?</h1>
+      <h3>Welcome back, its great to see you again!</h3>
+      <form class="form" [formGroup]="signInForm" (ngSubmit)="logInHandler()">
+        <div class="form-fields-container">
+          <mat-form-field floatLable="auto" appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <mat-icon></mat-icon>
+            <input matInput formControlName="email" required />
+            <span><img class="mail-icon"
+                src="https://i.pinimg.com/originals/bb/18/bd/bb18bdbbef437b2d50518db5a8292c94.png" alt="" /></span>
+          </mat-form-field>
+          <mat-form-field floatLable="auto" appearance="outline">
+            <mat-label>Password</mat-label>
+            <mat-icon></mat-icon>
+            <input matInput formControlName="password" required minlength="5" />
+            <span><img class="password-icon"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMnu2Symadycoz0EIN8fu7XJZ8CxfDj2jniIbqKZyHee2uJ4BcAruQ7akWNuI3yBiVl4&usqp=CAU"
+                alt="" /></span>
+            <mat-hint>At least 5 charecters</mat-hint>
+          </mat-form-field>
+        </div>
+      </form>
+      <button [disabled]="signInForm.invalid" (click)="logInHandler()" type="submit" mat-raised-button
+        class="submit-button">
+        SIGN IN TO MY ACCOUNT
+      </button>
+    </div>
+    <mat-divider class="vertical-divider" [vertical]="true"></mat-divider>
+    <div class="sign-up">
+      <h1>NEW CUSTOMER?</h1>
+      <p>
+        By creating an account you can reference your purchases and save your
+        addresses to make checking out quick & easy.
+      </p>
+      <p (click)="this._Router.navigateByUrl('sign-up')" class="sign-up-link">
+        Sounds good, sign me up!
+      </p>
+      <span class="exit" (click)="this._Router.navigateByUrl('')" matTooltip="CLOSE" mat-dialog-close
+        class="material-icons">
+        disabled_by_default
+      </span>
+    </div>
+  </mat-card>
+  <div class="right-guitar-image-container">
+    <img class="right-guitar-image" src="https://i.pinimg.com/236x/3b/ba/45/3bba45730e333055a9e2cdbfd8099dc7.jpg"
+      alt="" />
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>My Order</h1>
+  <h1 *ngIf="_ShoppingService.customerOrders.length < 1">
+    You have placed no orders.
+  </h1>
+  <div *ngFor="let order of _ShoppingService.customerOrders" class="orders">
+    <app-order-detail [order]="order"> </app-order-detail>
+  </div>
+  <h3 (click)="_Router.navigateByUrl('customer/account')">Back</h3>
+</div>

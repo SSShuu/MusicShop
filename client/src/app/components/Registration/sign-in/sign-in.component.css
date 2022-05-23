@@ -1,0 +1,84 @@
+.container {
+  margin-top: -30px;
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.form-container {
+  box-shadow: 0px 0px 2px 2px #000000;
+  background-color: rgba(255, 255, 255, 0.103);
+  display: flex;
+  margin: auto;
+  top: 15px;
+  width: 61vw;
+  height: 86%;
+  justify-content: space-between;
+}
+.sign-up-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.vertical-divider {
+  margin: 0 15px;
+}
+
+.sign-in-form {
+  width: 50%;
+}
+.sign-up {
+  width: 50%;
+}
+.form-fields-container {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 29vw;
+  margin-top: 45px;
+  background-color: #f2811e;
+  color: #fff;
+}
+.mail-icon{
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+}
+.password-icon{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+
+}
+.material-icons{
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.left-guitar-image-container {
+  position: absolute;
+  left: 0;
+  top: 156px;
+  width: 20vw;
+  height: 80vh;
+}
+.right-guitar-image-container {
+  position: absolute;
+  right: 0;
+  top: 156px;
+}
+.right-guitar-image {
+  width: 220px;
+  height: 74.8vh;
+}
+.left-guitar-image {
+  width: 220px;
+  height: 74.8vh;
+}

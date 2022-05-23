@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="order-form">
+    <form class="form" [formGroup]="checkoutForm" (ngSubmit)="proceedToPayment()">
+      <mat-form-field class="form-field-input" floatLable="auto" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="first_name" required />
+      </mat-form-field>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="last_name" required />
+      </mat-form-field>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>EMAIL</mat-label>
+        <input matInput formControlName="email" required />
+      </mat-form-field>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>Street Adress</mat-label>
+        <input matInput formControlName="shipping_street" required />
+      </mat-form-field>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" required />
+      </mat-form-field>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>Country/State</mat-label>
+        <input matInput formControlName="shipping_country" required />
+      </mat-form-field>
+      <mat-form-field class="form-field" floatLable="auto" appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input type="number" matInput formControlName="phone_number" required />
+      </mat-form-field>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input [min]="minDate" [max]="maxDate" matInput formControlName="shipping_date" required
+          [matDatepicker]="picker" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </form>
+    <button [disabled]="checkoutForm.invalid" (click)="proceedToPayment()" type="submit" mat-raised-button
+      class="submit-button">
+      PROCEED TO PAYMENT
+    </button>
+  </div>
+  <div class="order-summary-container">
+    <h1 class="order-summary-header">ORDER SUMMARY</h1>
+    <mat-divider></mat-divider>
+    <div class="total-price">
+      <div>
+        <h2 class="total">Total</h2>
+      </div>
+      <div>
+        <h2 class="price">
+          {{ _ShoppingService.totalPrice | number: "2.2" }} $
+        </h2>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+    <div class="cart-items">
+      <app-check-out-item *ngFor="let item of _ShoppingService.cartItems" class="cart-items-details" [item]="item">
+      </app-check-out-item>
+    </div>
+  </div>
+</div>

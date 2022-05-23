@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="order-detailes">
+    <h1>BILLING DETAILS</h1>
+    <mat-divider></mat-divider>
+    <br />
+    <p>{{ _Data.first_name }} {{ _Data.last_name }}</p>
+    <p>{{ _Data.shipping_street }}</p>
+    <p>
+      {{ _Data.city }} ,
+      {{ _Data.post_code }}
+    </p>
+    <p>{{ _Data.shipping_country }}</p>
+    <p>{{ _Data.phone_number }}</p>
+    <h1>PAYMENT</h1>
+    <div class="credit-card-container">
+      <form class="form" [formGroup]="paymentForm">
+        <mat-form-field
+          class="credit-card-number"
+          floatLable="auto"
+          appearance="outline"
+        >
+          <mat-label>Credit Card Number</mat-label>
+          <input
+            type="tel"
+            matInput
+            formControlName="creditCard"
+            required
+            maxlength="16"
+          />
+          <mat-hint>Minimum 12 digits</mat-hint>
+          <mat-error *ngIf="paymentForm.controls.creditCard.errors?.required"
+            >CARD NUMBER MUST BE PROVIDED</mat-error
+          >
+          <mat-error *ngIf="paymentForm.controls.creditCard.errors?.pattern"
+            >NUMBERS ONLY</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field
+          class="expiration-date"
+          floatLable="auto"
+          appearance="outline"
+        >
+          <mat-label>Expiration Date </mat-label>
+          <input
+            type="tel"
+            ccExp
+            matInput
+            formControlName="expiration_date"
+            placeholder="MM/YYYY"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field
+          class="card-verification"
+          floatLable="auto"
+          appearance="outline"
+          minlength="3"
+          maxlength="3"
+        >
+          <mat-label>CVC </mat-label>
+          <input
+            type="tel"
+            autocomplete="off"
+            matInput
+            formControlName="credit_card_verification"
+            required
+          />
+        </mat-form-field>
+      </form>
+    </div>
+    <button
+      [disabled]="paymentForm.invalid"
+      (click)="paymentSubmitHandler()"
+      type="submit"
+      mat-raised-button
+      class="submit-button"
+      mat-dialog-close
+    >
+      PLACE ORDER
+    </button>
+  </div>
+  <div class="order-summary">
+    <h1>ORDER SUMMARY</h1>
+    <mat-divider></mat-divider>
+    <div class="total-price">
+      <div>
+        <h2 class="total">Total:</h2>
+      </div>
+      <div>
+        <h2 class="price">{{ _ShoppingService.totalPrice | number: "2.2" }} $</h2>
+      </div>
+    </div>
+    <div class="cart-items-details-container">
+      <app-check-out-item
+        *ngFor="let item of _ShoppingService.cartItems"
+        class="cart-items-details"
+        [item]="item"
+      ></app-check-out-item>
+    </div>
+  </div>
+</div>

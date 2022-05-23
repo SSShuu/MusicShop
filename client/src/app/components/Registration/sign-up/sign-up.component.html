@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="header-container">
+    <h1 class="header">CREATE NEW CUSTOMER ACCOUNT</h1>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="sign-up-form-container">
+    <h1 class="personal-information-header">Personal Information</h1>
+    <form [formGroup]="signUpForm" class="sign-up-form">
+      <div class="personal-information-container">
+        <mat-form-field
+          class="form-field"
+          floatLable="auto"
+          appearance="outline"
+        >
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="first_name" required />
+        </mat-form-field>
+        <mat-form-field
+          class="form-field"
+          floatLable="auto"
+          appearance="outline"
+        >
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="last_name" required />
+        </mat-form-field>
+      </div>
+      <div>
+        <h1>Sign-in Information</h1>
+      </div>
+
+      <div class="sign-in-information-container">
+        <mat-form-field
+          class="form-field"
+          floatLable="auto"
+          appearance="outline"
+        >
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="email" required />
+        </mat-form-field>
+        <mat-form-field
+          class="form-field"
+          floatLable="auto"
+          appearance="outline"
+        >
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" required minlength="5" />
+          <mat-hint>At least 5 charecters</mat-hint>
+        </mat-form-field>
+        <mat-form-field
+          class="form-field"
+          floatLable="auto"
+          appearance="outline"
+        >
+          <mat-label>Confirm Password</mat-label>
+          <input
+            matInput
+            formControlName="confirmPassword"
+            required
+            minlength="5"
+          />
+        </mat-form-field>
+      </div>
+    </form>
+    <div class="button-wraper">
+      <button
+        [disabled]="signUpForm.invalid"
+        class="button"
+        (click)="signUpHandler()"
+        mat-raised-button
+      >
+        CREATE AN ACCOUNT
+      </button>
+    </div>
+    <div class="go-back-container">
+      <p class="go-back" (click)="_Router.navigateByUrl('sign-in')">Back</p>
+    </div>
+  </div>
+</div>
