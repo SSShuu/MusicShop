@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-card {
+  -webkit-box-shadow: 0px 0px 15px 5px #000000;
+  box-shadow: 0px 0px 15px 5px #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 202px;
+  height: 400px;
+  margin: 15px 5px 20px 5px;
+}
+.logo {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+}
+.item-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 180px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.item-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3c3c3c;
+}
+.item-name-container {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.item-name {
+  text-decoration: underline;
+  text-align: center;
+}
+.new-releases-header {
+  display: flex;
+  justify-content: center;
+}
+.just-landed {
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  width: 140px;
+  -webkit-box-shadow: 0px 0px 15px 5px #000000;
+  box-shadow: 0px 0px 15px 5px #000000;
+  background-color: #361937;
+  color: #fff;
+  text-align: center;
+}
+.icons-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: -10px;
+}
+.edit-icon {
+  cursor: pointer;
+  max-width: 40px;
+  max-height: 40px;
+}
+.material-icons {
+  cursor: pointer;
+  max-width: 40px;
+  max-height: 40px;
+}

@@ -1,0 +1,27 @@
+* {
+  font-family: "Hind", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.mat-snack-bar-container {
+  text-align: center;
+}
+
+.mat-simple-snackbar {
+  display: inline-block !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(86, 230, 93);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #110101a4;
+}

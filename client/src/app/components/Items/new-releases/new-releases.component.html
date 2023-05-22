@@ -1,0 +1,24 @@
+<div class="container">
+  <mat-card class="item-card">
+    <span class="just-landed">NEW</span>
+    <img class="item-image" src="{{ new.product_images[0] }}" alt="img" />
+    <div class="item-name-container">
+      <h3 (click)="goToSelectedItem(new._id)" class="item-name">
+        {{ new.product_name }}
+      </h3>
+    </div>
+    <h3 class="item-price">{{ new.product_price | number: "2.2" }} $</h3>
+    <div *ngIf="_AuthService.currentUser.isAdmin" class="icons-container">
+      <div class="edit-icon-container">
+        <img (click)="openAdminEditDialog(new._id)" matTooltip="EDIT" class="edit-icon"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtJFy05oXlIRpBMwcCE5i9c_9U19niy7fLFgwB7fuBYsy5orQuPyRdmBM8FMz0nhowryI&usqp=CAU"
+          alt="edit icon" />
+      </div>
+      <div class="delete-icon-container">
+        <span (click)="openDeleteWarningDialog(new._id)" class="material-icons" matTooltip="DELETE">
+          delete
+        </span>
+      </div>
+    </div>
+  </mat-card>
+</div>

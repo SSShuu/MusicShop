@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="main-showFooter-container">
+    <div class="cf">
+      <img class="bottom"
+        src="https://guitarthung.com/wp-content/uploads/2019/05/top-cua-hang-nhac-cu-uy-tin-nhat-hcm-7.jpg" alt="" />
+      <img class="top" src="https://wallpaperaccess.com/full/1586645.jpg" alt="" />
+    </div>
+    <div class="popular-brands-container">
+      <div class="header">
+        <h1 class="popular-brands-header">POPULAR BRANDS</h1>
+      </div>
+      <div class="popular-brands-logos">
+        <div class="fender">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/Fender_3_1.png" alt="Fender logo" />
+        </div>
+        <div class="gibson">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/Gibson_1.png" alt="Gibson logo" />
+        </div>
+        <div class="yamahaa">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/Yamaha_1.png" alt="Yamahaa logo" />
+        </div>
+        <div class="roland">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/Roland_5.png" alt="Roland logo" />
+        </div>
+        <div class="taylor">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/Taylor_1.png" alt="Taylor logo" />
+        </div>
+        <div class="tourtech">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/TourTech_100_1_1.png" alt="Tourtech logo" />
+        </div>
+        <div class="moog">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/Moog_100_1.png" alt="Moog logo" />
+        </div>
+        <div class="martin">
+          <img src="https://www.pmtonline.co.uk/media/wysiwyg/Martin_1.png" alt="Martin logo" />
+        </div>
+      </div>
+      <mat-divider class="divider"></mat-divider>
+    </div>
+    <h1 class="new-releases-header">NEW RELEASES</h1>
+    <div class="new-products-conatainer">
+      <div *ngFor="let new of _ShoppingService.newReleases">
+        <app-new-releases [new]="new"></app-new-releases>
+      </div>
+    </div>
+    <div class="additional-information-container">
+      <div class="additional-information">
+        <h1>About Music Shop</h1>
+        <p>
+          From starter guitars to pro microphones and amps,Music
+          online music shop has a huge range of music equipment available.
+          Whether you're looking for a violin, keyboard, electronic drum kit or
+          PA system, we can help. <br /><br />
+          We've got some of the biggest brands in stock, including Yamaha,
+          Roland, Casio, Fender, Ibanez, Alesis, Behringer & Gibson, as well as
+          our own great value product range. <br /><br />
+          To receive excellent service and a great price on your next musical
+          instrument purchase, try us now!
+        </p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,81 @@
+<div *ngIf="_ShoppingService.showHeader" class="container">
+  <div class="logo-container">
+    <img class="logo" (click)="backToHomePage()"
+      src="https://cdn.dribbble.com/users/725831/screenshots/3178684/media/cddd4a80f7c645928e441fa9a56a56e2.png?compress=1&resize=800x600&vertical=top"
+      alt="logo" />
+  </div>
+  <div class="search-input">
+    <mat-form-field class="search-field" appearance="outline">
+      <mat-label>What are you looking for?</mat-label>
+      <input matInput type="text" [(ngModel)]="searchFilter" (ngModelChange)="Search()" autocomplete="off" />
+      <img class="Magnifying-glass-icon" src="https://www.pngrepo.com/png/45615/512/magnifier.png" alt="" />
+    </mat-form-field>
+  </div>
+  <div class="header">
+    <h1 class="lionmusic">Music Store</h1>
+  </div>
+
+  <mat-card (clickOutside)="onClickedOutside($event)" *ngIf="showFiltereSearch" class="filtered-products-container">
+    <div class="filtered-products" *ngFor="let product of filteredProducts">
+      <p (click)="goToSelectedItem(product._id)" class="product-name">
+        {{ product.product_name }}
+      </p>
+    </div>
+  </mat-card>
+
+  <div class="icons-container">
+    <div class="icon-container">
+      <span (click)="backToHomePage()" matTooltip="HOME">
+        <img class="icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Home_Icon.svg/1200px-Home_Icon.svg.png"
+          alt="" />
+      </span>
+    </div>
+    <div class="icon-container">
+      <span class="material-icons" (click)="_Router.navigateByUrl('contact')" matTooltip="CONTACT">
+        phone
+      </span>
+    </div>
+    <div class="icon-container">
+      <span *ngIf="!_AuthService.loggedIn()" (click)="_Router.navigateByUrl('sign-in')" matTooltip="SIGN-IN">
+        <img class="icon"
+          src="https://icons-for-free.com/iconfiles/png/512/human+person+user+icon-1320196276306824343.png" alt="" />
+      </span>
+      <span *ngIf="_AuthService.loggedIn()" (click)="_Router.navigateByUrl('customer/account')" matTooltip="MY ACCOUNT">
+        <img class="icon"
+          src="https://icons-for-free.com/iconfiles/png/512/human+person+user+icon-1320196276306824343.png" alt="" />
+      </span>
+    </div>
+    <div class="icon-container">
+      <div *ngIf="!_AuthService.currentUser.isAdmin">
+        <span class="material-icons" *ngIf="_ShoppingService.cartItems.length" (click)="openBasketDialog()"
+          matTooltip="BASKET">shopping_basket
+        </span>
+      </div>
+
+      <span *ngIf="_AuthService.currentUser.isAdmin" class="material-icons" (click)="openAdminAddProductForm()"
+        matTooltip="ADD PRODUCT">add
+      </span>
+      <div *ngIf="!_AuthService.currentUser.isAdmin">
+        <span class="material-icons" *ngIf="!_ShoppingService.cartItems.length"
+          matTooltip="YOUR CART IS EMPTY">shopping_basket
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="this._ShoppingService.showCheckoutHeader" class="check-out-header-container">
+  <img class="logo" (click)="backToHomePage()" src="https://phuongan0tuoi.files.wordpress.com/2010/05/treblecleff.jpg"
+    alt="logo" />
+  <div *ngIf="this._ShoppingService.showCheckoutHeader" class="check-out-header-container">
+    <div class="continue-shopping-header">
+      <p (click)="continueShopping()">CONTINUE SHOPPING</p>
+    </div>
+    <div class="header-container-checkout">
+      <h1 class="lionmusic">Book Store</h1>
+    </div>
+    <div class="secure-header">
+      <span class="material-icons"> https </span>
+      <p>SECURE CHECKOUT</p>
+    </div>
+  </div>

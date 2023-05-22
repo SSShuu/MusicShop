@@ -1,0 +1,11 @@
+<div *ngIf="_ShoppingService.showNavBar" class="container">
+  <div
+    class="categories-container"
+    *ngFor="let category of _ShoppingService.categories"
+    (click)="selectCategory(category.category_name, category._id)"
+  >
+    <p class="category">
+      {{ category.category_name }}
+    </p>
+  </div>
+</div>

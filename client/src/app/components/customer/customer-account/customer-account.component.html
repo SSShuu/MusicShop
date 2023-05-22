@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="fetures">
+    <ul class="ul">
+      <li (click)="_AuthService.logout()">Logout</li>
+      <li class="myaccount">My Account</li>
+    </ul>
+  </div>
+  <mat-divider class="vertical-divider" [vertical]="true"></mat-divider>
+  <div class="my-account-container">
+    <h1 class="header">MY ACCOUNT</h1>
+    <h2 class="second-header">
+      HEY {{ _AuthService.currentUser.first_name?.toUpperCase() }}, WELCOME TO
+      YOUR ACCOUNT
+    </h2>
+    <p class="dashboard">
+      Our dashboard gives you a snap shot of your account area including latest
+      offers and news tailored to you.
+    </p>
+    <h3 class="contact-information-header">CONTACT INFORMATION</h3>
+    <p class="name">
+      {{ _AuthService.currentUser.first_name }}
+      {{ _AuthService.currentUser.last_name }}
+    </p>
+    <h2>{{ _AuthService.currentUser.email }}</h2>
+  </div>
+</div>

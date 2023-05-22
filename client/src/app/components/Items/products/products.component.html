@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="details-container">
+    <h1 *ngIf="_ShoppingService.category == 'Guitar'" class="category-name">
+      {{ "Guitar" }}
+    </h1>
+    <h1 *ngIf="_ShoppingService.category == 'Orchestral'" class="category-name">
+      {{ "Orchestral" }}
+    </h1>
+    <h1 *ngIf="_ShoppingService.category == 'Keyboards'" class="category-name">
+      {{ "Keyboards" }}
+    </h1>
+    <h1 *ngIf="_ShoppingService.category == 'woodwinds'" class="category-name">
+      {{ "woodwinds" }}
+    </h1>
+    <h1 *ngIf="_ShoppingService.category == 'brass'" class="category-name">
+      {{ "brass" }}
+    </h1>
+    <p class="details" *ngIf="_ShoppingService.category == 'Guitar'">
+      Looking for your dream guitar, or a beginner just learning to play, we've
+      got an Electric Guitar to suit your taste, style and budget. <br />
+      <br />
+      Here you'll find our range of Solid-Body and Semi-Hollow body Guitar
+      styles, as well as our top picks for Beginners, Premium & Custom Shop
+      Models, Left-Handed Guitars and Extended Range Guitars if you
+      need that extra versatility from a 7, 8 or 9-String model.
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'Orchestral'">
+      Our orchestral instruments are selected by in-house experts. Browse
+      strings, brass, woodwind, and orchestral percussion. You’ll find the most
+      sought-after brands like Stentor, Yamaha, and Buffet Crampon, as well as
+      our LionMusic range. From violins and cellos to trumpets, saxophones, and
+      more, there’s something for everyone. Plus, our affordable student
+      instruments are great for schools, orchestras, and ensembles.
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'Keyboards'">
+      Each of our stores stock a massive range of home digital pianos,
+      stage synthesizers and MIDI Keyboards. All keyboards in
+      stock over £99 are eligible for FREE Next Day Delivery
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'woodwinds'">
+    </p>
+    <p class="details" *ngIf="_ShoppingService.category == 'brass'">
+    </p>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+  <div class="products-conatainer">
+    <div *ngFor="let product of _ShoppingService.productsByCategory" class="products">
+      <app-product-item [product]="product"></app-product-item>
+    </div>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+</div>

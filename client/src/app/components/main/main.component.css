@@ -1,0 +1,168 @@
+.main-showFooter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 98vw;
+  background-color: rgb(106, 106, 114);
+}
+
+.special-offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 60vw;
+  height: 20vh;
+}
+
+.date {
+  color: #83888b;
+}
+
+.bottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.new-releases-header {
+  margin-top: 20px;
+}
+
+.cf {
+  height: 73vh;
+  width: 98vw;
+}
+
+.cf img {
+  max-height: 73vh;
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes cfFadeInOut {
+  0% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.cf img.top {
+  animation-name: cfFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-direction: alternate;
+}
+
+.about-us-component-container {
+  width: 60vw;
+  border: 2px solid black;
+  margin-bottom: 5px;
+}
+
+.instruments-by-category-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid hotpink;
+  width: 60vw;
+  height: 55vh;
+  margin-bottom: 50px;
+}
+
+.guitars {
+  width: 250px;
+  height: 250px;
+  background-image: url("https://www.fmicassets.com/Damroot/JacksonVert/10001/2919904529_jac_ins_frt_01_rr.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text-block {
+  width: 80%;
+  height: 80%;
+}
+
+.drums {
+  width: 250px;
+  height: 250px;
+  background-image: url("https://www.fullcompass.com/common/products/lgr/399729.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pianos {
+  width: 250px;
+  height: 250px;
+  background-image: url("https://www.kley-zemer.co.il/Media/Uploads/BostonPE_GP163EP_fma_scale.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.orchestral {
+  width: 250px;
+  height: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIP4bSBiBshxRuIVNXP1eAEkEUr0fsaJj6FQ&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.popular-brands-container {
+  width: 85vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.popular-brands-header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.popular-brands-logos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.additional-information-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additional-information {
+  background-color: rgb(106, 106, 114);
+  width: 45vw;
+  margin: 20px;
+}
+
+.new-products-conatainer {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}

@@ -1,0 +1,43 @@
+.container {
+  width: 80vw;
+  margin: auto;
+  height: 100vh;
+  margin-bottom: 100px;
+}
+.contact-form {
+  margin: 5px;
+  width: 48vw;
+  height: 68vh;
+  border: 2px solid firebrick;
+}
+.contact-details {
+  margin: 5px;
+  width: 48vw;
+  height: 68vh;
+  border: 2px solid firebrick;
+}
+.header {
+  margin-top: 100px;
+  margin-bottom: 45px;
+  font-size: 32px;
+  color: #434649;
+  letter-spacing: 3px;
+}
+.li {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.friday,
+.sunday-thursday {
+  font-weight: 500;
+}
+.opening-hours-header {
+  font-size: xx-large;
+  font-weight: 550;
+  color: #434649;
+}
+.education,
+.secondary-header {
+  color: #434649;
+}

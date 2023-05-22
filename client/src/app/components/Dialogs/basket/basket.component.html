@@ -1,0 +1,38 @@
+<div class="container">
+  <div>
+    <h1 class="basket-header">
+      MY BASKET({{ _ShoppingService.cartItems.length }} ITEMS)
+    </h1>
+  </div>
+  <div *ngIf="_ShoppingService.cartItems.length < 1">Cart is Empty</div>
+  <mat-divider></mat-divider>
+  <div class="check-out-item-container">
+    <app-check-out-item
+      *ngFor="let item of _ShoppingService.cartItems"
+      [item]="item"
+    ></app-check-out-item>
+  </div>
+  <br /><br />
+
+  <div class="total">
+    <div>
+      <p>Total</p>
+    </div>
+    <div>
+      <p>{{ _ShoppingService.totalPrice | number: "2.2" }} $</p>
+    </div>
+  </div>
+  <mat-dialog-actions class="proceed-to-checkout-button-container">
+    <span matTooltip="CLOSE" mat-dialog-close class="material-icons">
+      disabled_by_default
+    </span>
+    <button
+      [disabled]="!_ShoppingService.cartItems.length "
+      class="proceed-to-checkout-button"
+      (click)="proceedToCheckOut()"
+      mat-dialog-close
+    >
+      PROCEED TO CHECKOUT
+    </button>
+  </mat-dialog-actions>
+</div>

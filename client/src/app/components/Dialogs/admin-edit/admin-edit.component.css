@@ -1,0 +1,38 @@
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.name-price-container {
+  display: flex;
+  justify-content: space-between;
+}
+.name-price-container > .name {
+  width: 48%;
+  margin-right: 5px;
+}
+.name-price-container > .price {
+  width: 13%;
+  margin-right: 5px;
+}
+.name-price-container > .category {
+  width: 33%;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+div > .form-field {
+  width: 70%;
+}
+.edit-button {
+  width: 10vw;
+  background-color: #f2811e;
+  color: #fff;
+  font-size: 1.2rem;
+  border: 1px solid #d11a2a;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}

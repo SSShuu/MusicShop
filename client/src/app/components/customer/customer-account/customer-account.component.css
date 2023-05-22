@@ -1,0 +1,72 @@
+.container {
+  height: 100vh;
+  display: flex;
+}
+.fetures {
+  width: 26vw;
+  margin: 15px;
+}
+.edit {
+  display: flex;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 3px;
+  margin: 40px auto;
+  list-style: none;
+  font-size: 18px;
+  color: #3c3c3c;
+}
+li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.header {
+  color: #361937;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+.my-account-container {
+  margin-left: 90px;
+  margin-top: 50px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+.second-header {
+  margin-bottom: 40px;
+  color: #361937;
+  line-height: 1.1;
+  font-weight: 400;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.dashboard{
+  color: #3c3c3c;
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 45px;
+}
+.contact-information-header{
+  font-size: 18px;
+  color: #361937;
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 1.625rem;
+  margin-top: 1.03125rem;
+  margin-bottom: .6875rem;
+}
+.name{
+  color: #3c3c3c;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.edit{
+  text-decoration: underline;
+  cursor: pointer;
+}
